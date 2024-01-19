@@ -61,12 +61,11 @@ const AuthForm = () => {
         if (callback?.error) {
           toast.error('Invalid credentials!');
         }
-
         if (callback?.ok) {
           router.push('/conversations')
         }
       })
-      .catch(() => toast.error('Something went wrong!'))
+      .catch(() => toast.error('Something went wrong! Try Again !'))
       .finally(() => setIsLoading(false))
     }
 
@@ -82,6 +81,7 @@ const AuthForm = () => {
 
         if (callback?.ok) {
           router.push('/conversations')
+          
         }
       })
       .finally(() => setIsLoading(false))
@@ -174,13 +174,14 @@ const AuthForm = () => {
             </div>
           </div>
 
-          <div className="mt-6 flex gap-2">
-            <AuthSocialButton 
+          <div className="mt-6 flex gap-2 ">
+            {/* <AuthSocialButton 
               icon={BsGithub} 
               onClick={() => socialAction('github')} 
-            />
+            /> */}
             <AuthSocialButton 
               icon={BsGoogle} 
+              
               onClick={() => socialAction('google')} 
             />
           </div>

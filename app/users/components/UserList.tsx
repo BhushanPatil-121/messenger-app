@@ -23,10 +23,10 @@ const UserList: React.FC<UserListProps> = ({
     setvalueforSearch(valuefor)
   }
   const handleClick = () => {
-    console.log(valueforSearch)
+    // console.log(valueforSearch)
     let filteredArray = items.filter((item) => item.name?.toLowerCase().startsWith(valueforSearch.toLowerCase()));
     setlistArray(filteredArray);
-    console.log(filteredArray);
+    // console.log(filteredArray);
     
     if (filteredArray.length==0) {
       setfound(false)
@@ -59,7 +59,7 @@ const UserList: React.FC<UserListProps> = ({
               py-4
             "
           >
-            People
+            <center>Search Your Friend</center>
           </div>
           <div>
             {/* add search bar */}
@@ -92,7 +92,12 @@ const UserList: React.FC<UserListProps> = ({
               data={item}
             />
           )): found?<></>:
-          <center><div style={{width:"100%",marginTop:"40px",fontSize:"24px",textAlign:"center"}}>Invalid User Email</div></center>}
+          <center><div  className="
+          text-2xl 
+          font-bold 
+          text-neutral-800 
+          py-4
+        " style={{width:"100%",marginTop:"40px",fontSize:"24px",textAlign:"center"}}>User Not Found !!</div></center>}
       </div>
     </aside>
   );

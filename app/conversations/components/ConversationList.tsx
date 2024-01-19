@@ -20,8 +20,8 @@ interface ConversationListProps {
   title?: string;
 }
 
-const ConversationList: React.FC<ConversationListProps> = ({ 
-  initialItems, 
+const ConversationList: React.FC<ConversationListProps> = ({
+  initialItems,
   users
 }) => {
   const [items, setItems] = useState(initialItems);
@@ -76,12 +76,13 @@ const ConversationList: React.FC<ConversationListProps> = ({
     pusherClient.bind('conversation:new', newHandler)
     pusherClient.bind('conversation:remove', removeHandler)
   }, [pusherKey, router]);
+  // console.log(items);
 
   return (
     <>
-      <GroupChatModal 
-        users={users} 
-        isOpen={isModalOpen} 
+      <GroupChatModal
+        users={users}
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
       <aside className={clsx(`
@@ -101,8 +102,8 @@ const ConversationList: React.FC<ConversationListProps> = ({
             <div className="text-2xl font-bold text-neutral-800">
               Messages
             </div>
-            <div 
-              onClick={() => setIsModalOpen(true)} 
+            <div
+              onClick={() => setIsModalOpen(true)}
               className="
                 rounded-full 
                 p-2 
@@ -123,10 +124,22 @@ const ConversationList: React.FC<ConversationListProps> = ({
               selected={conversationId === item.id}
             />
           ))}
+          {
+            items.length == 0 ?
+
+              <div className="
+         
+          text-2xl 
+          font-bold 
+          text-neutral-800 
+          py-4
+        " style={{ width: "100%", marginTop: "40px", fontSize: "24px", textAlign: "center" }}> <center>Add User To Chat !!</center></div>
+              : <></>
+          }
         </div>
       </aside>
     </>
-   );
+  );
 }
- 
+
 export default ConversationList;
