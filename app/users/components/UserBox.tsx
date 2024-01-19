@@ -40,7 +40,7 @@ const UserBox: React.FC<UserBoxProps> = ({
           items-center 
           space-x-3 
           bg-white 
-          p-3 
+          p-3   
           hover:bg-neutral-100
           rounded-lg
           transition
@@ -53,10 +53,14 @@ const UserBox: React.FC<UserBoxProps> = ({
             <span className="absolute inset-0" aria-hidden="true" />
             <div className="flex justify-between items-center mb-1">
               <p className="text-sm font-medium text-gray-900">
-                {data.name}
+                {data.name}  
               </p>
+
+              <span><button className="px-2 text-white bg-purple-700 border-l rounded "style={{float:'left'}}>Add</button></span>
             </div>
+           
           </div>
+          
         </div>
       </div>
     </>
