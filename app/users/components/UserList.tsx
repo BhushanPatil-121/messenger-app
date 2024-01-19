@@ -92,16 +92,12 @@ const UserList: React.FC<UserListProps> = ({
               data={item}
             />
           )): found?<></>:
-<<<<<<< HEAD
           <center><div  className="
           text-2xl 
           font-bold 
           text-neutral-800 
           py-4
         " style={{width:"100%",marginTop:"40px",fontSize:"24px",textAlign:"center"}}>User Not Found !!</div></center>}
-=======
-          <center><div style={{width:"100%",marginTop:"40px",fontSize:"24px",textAlign:"center"}}>User Not Found !!</div></center>}
->>>>>>> 82dd0ab47ce9f805c8c33e6d6c977d7d4509b7c6
       </div>
     </aside>
   );
