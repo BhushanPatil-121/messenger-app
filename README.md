@@ -1,18 +1,18 @@
-# Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher (2023)
+# Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher , Cloudinary
 
 
-This is a repository for a Real-Time Messenger Clone: Next.js 13, React, Tailwind, Prisma, MongoDB, NextAuth, Pusher.
+This is a repository for a Real-Time Messenger Clone
 
 
 
 ### Prerequisites
 
-**Node version 14.x**
+**Node version 20.x**
 
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/AntonioErdeljac/next13-messenger.git
+git clone https://github.com/BhushanPatil-121/messenger-app.git
 ```
 
 ### Install packages
@@ -53,11 +53,3 @@ npx prisma db push
 ```shell
 npm run dev
 ```
-
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
