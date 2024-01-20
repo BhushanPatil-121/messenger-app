@@ -47,10 +47,11 @@ const Form = () => {
 
   return ( 
     <div 
+    // style={{position:"relative", bottom:"50px"}}
       className="
         py-4 
         px-4 
-        bg-white 
+        bg-white
         border-t 
         flex 
         items-center 

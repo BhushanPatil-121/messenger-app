@@ -14,12 +14,12 @@ interface MobileFooterProps {
 
 const MobileFooter: React.FC<MobileFooterProps> = ({ currentUser }) => {
   const routes = useRoutes();
-  // const { isOpen } = useConversation();
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen } = useConversation();
+  const [isOpen2, setIsOpen2] = useState(isOpen);
 
-  // if (isOpen) {
-  //   return null;
-  // }
+  if (isOpen) {
+    return null;
+  }
   return (
     <div
       className="
@@ -36,9 +36,9 @@ const MobileFooter: React.FC<MobileFooterProps> = ({ currentUser }) => {
       "
     >
 
-      <SettingsModal currentUser={currentUser} isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <SettingsModal currentUser={currentUser} isOpen={isOpen} onClose={() => setIsOpen2(false)} />
       <div
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen2(true)}
         style={{margin:"10px 10px 3px 15px"}}
         className="cursor-pointer hover:opacity-75 transition"
       >
