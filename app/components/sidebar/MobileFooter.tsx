@@ -36,7 +36,7 @@ const MobileFooter: React.FC<MobileFooterProps> = ({ currentUser }) => {
       "
     >
 
-      <SettingsModal currentUser={currentUser} isOpen={isOpen} onClose={() => setIsOpen2(false)} />
+      <SettingsModal currentUser={currentUser} isOpen={isOpen2} onClose={() => setIsOpen2(false)} />
       <div
         onClick={() => setIsOpen2(true)}
         style={{margin:"10px 10px 3px 15px"}}
